@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PathLight LLC</title>
+<meta name="description" content="Leadership, biblical, and nonprofit consulting with Eliot Rupe — Southern Pines, North Carolina.">
+</head>
+<body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Lato:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+  :root{
+    --bg: #F6F1E7;
+    --bg-alt: #EEE5D4;
+    --ink: #182238;
+    --ink-soft: #4B5872;
+    --accent: #A9824F;
+    --accent-soft: #C9A876;
+    --rule: rgba(24,34,56,0.16);
+    --nav-h: 64px;
+    color-scheme: light;
+  }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0E1626;
+      --bg-alt: #141F35;
+      --ink: #F2ECDC;
+      --ink-soft: #B7BFCF;
+      --accent: #D8B573;
+      --accent-soft: #E7CB94;
+      --rule: rgba(242,236,220,0.18);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0E1626;
+    --bg-alt: #141F35;
+    --ink: #F2ECDC;
+    --ink-soft: #B7BFCF;
+    --accent: #D8B573;
+    --accent-soft: #E7CB94;
+    --rule: rgba(242,236,220,0.18);
+    color-scheme: dark;
+  }
+
+  *{ box-sizing: border-box; }
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Lato', system-ui, sans-serif;
+    padding: var(--nav-h) 24px 0;
+  }
+  .wrap{ max-width: 760px; margin: 0 auto; }
+
+  .topbar{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    height: var(--nav-h);
+    padding-inline: 24px;
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .topbar-inner{
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .topbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .topbar-mark{ width: 19px; height: 19px; color: var(--accent); }
+  .topbar-brand span{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    letter-spacing: 0.08em;
+  }
+  .topbar-links{
+    display: flex;
+    gap: 26px;
+    flex-wrap: nowrap;
+  }
+  .topbar-links a{
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .topbar-links a:hover{ color: var(--accent); }
+  .topbar-links a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+  .topbar-cta{
+    flex-shrink: 0;
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border: 1px solid var(--accent);
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .topbar-cta:hover{ background: var(--accent); color: var(--bg); }
+  .topbar-cta:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  @media (max-width: 760px){
+    .topbar-links{ display: none; }
+  }
+
+  header.hero{
+    padding-block: 64px 56px;
+    text-align: center;
+  }
+  .mark{ width: 46px; height: 46px; margin: 0 auto 22px; display: block; color: var(--accent); }
+  .eyebrow{
+    font-size: 12.5px;
+    letter-spacing: 0.28em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    margin: 0 0 18px;
+  }
+  h1{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: clamp(28px, 4.4vw, 42px);
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  .subhead{
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin: 0 0 30px;
+  }
+  .verse{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .verse cite{ font-style: normal; color: var(--accent); }
+
+  .rule{
+    border: none;
+    border-top: 1px solid var(--rule);
+    width: 64px;
+    margin: 0 auto;
+  }
+  .rule.gold{ border-top: 2px solid var(--accent-soft); width: 40px; }
+
+  section{ padding-block: 56px; scroll-margin-top: var(--nav-h); }
+  section.alt{
+    background: var(--bg-alt);
+    margin-inline: -24px;
+    padding-inline: 24px;
+  }
+  .section-inner{ max-width: 760px; margin: 0 auto; }
+
+  h2{
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 26px;
+  }
+  p{ line-height: 1.7; font-weight: 300; font-size: 16.5px; max-width: 62ch; }
+  .lede{ font-size: 18px; }
+
+  .services{
+    display: flex;
+    flex-direction: column;
+  }
+  .service{
+    padding-block: 22px;
+    border-top: 1px solid var(--rule);
+  }
+  .service:last-child{ border-bottom: 1px solid var(--rule); }
+  .service h3{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 15.5px;
+    letter-spacing: 0.02em;
+    margin: 0 0 8px;
+  }
+  .service p{ font-size: 15px; margin: 0; color: var(--ink-soft); }
+
+  @media (max-width: 560px){
+    header.hero{ padding-block: 48px 40px; }
+  }
+
+  .fountain-name{
+    font-size: 12px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 20px 0 10px;
+  }
+  .fountain-flow{
+    font-size: 16px;
+    color: var(--ink);
+    margin: 0 0 22px;
+    line-height: 1.9;
+  }
+  .fountain-flow .arrow{ color: var(--accent); margin: 0 2px; }
+  .sequence{
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    margin: 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--rule);
+  }
+  .sequence b{ color: var(--ink); font-weight: 600; }
+
+  .contact-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 28px;
+    align-items: baseline;
+    margin-top: 6px;
+  }
+  .section-inner a{
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+  .section-inner a:hover{ color: var(--accent); }
+  .section-inner a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .cta-button{
+    display: inline-block;
+    margin-top: 26px;
+    padding: 12px 26px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .cta-button:hover{ background: var(--accent); color: var(--bg); }
+  .cta-button:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  footer{
+    padding-block: 40px 56px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.03em;
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{
+      animation: rise .7s ease both;
+    }
+    .reveal:nth-of-type(2){ animation-delay: .08s; }
+  }
+  @keyframes rise{
+    from{ opacity: 0; transform: translateY(10px); }
+    to{ opacity: 1; transform: none; }
+  }
+</style>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="#" aria-label="PathLight LLC — back to top">
+      <svg class="topbar-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M24 3 L28 9 H20 Z" fill="currentColor"/>
+        <rect x="15" y="9" width="18" height="4" rx="1" fill="currentColor"/>
+        <rect x="14" y="15" width="20" height="24" rx="3" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="14" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="14" y1="32" x2="34" y2="32" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M24 24 C21 27 21 31 24 34 C27 31 27 27 24 24 Z" fill="currentColor"/>
+        <rect x="20" y="39" width="8" height="3" rx="1" fill="currentColor"/>
+      </svg>
+      <span>PathLight</span>
+    </a>
+    <div class="topbar-links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#rol">Rightly Ordered Leader</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="topbar-cta" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0Nqj0R26VjqbiG_hMcqMYKFMmdf1lK3OAPswXP7HAnUSSwySAVHLJI0uCgvjkLq0eeObf37Wzx" target="_blank" rel="noopener">Schedule a call</a>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <svg class="mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M24 3 L28 9 H20 Z" fill="currentColor"/>
+      <rect x="15" y="9" width="18" height="4" rx="1" fill="currentColor"/>
+      <rect x="14" y="15" width="20" height="24" rx="3" stroke="currentColor" stroke-width="1.6"/>
+      <line x1="14" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="1.2"/>
+      <line x1="14" y1="32" x2="34" y2="32" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M24 24 C21 27 21 31 24 34 C27 31 27 27 24 24 Z" fill="currentColor"/>
+      <rect x="20" y="39" width="8" height="3" rx="1" fill="currentColor"/>
+    </svg>
+    <p class="eyebrow">PathLight LLC</p>
+    <h1>Clarity. Alignment. Direction.</h1>
+    <p class="subhead">Leadership &amp; organizational consulting — Southern Pines, North Carolina</p>
+    <hr class="rule">
+    <p class="verse" style="margin-top:22px;">&ldquo;Your word is a lamp for my feet, a light on my path.&rdquo; <cite>— Psalm 119:105</cite></p>
+  </header>
+
+  <section id="about">
+    <div class="section-inner reveal">
+      <h2>About</h2>
+      <p class="lede">PathLight exists to bring clarity to organizations and the people leading them — untangling structure, sharpening decisions, and building the discipline that turns direction into results.</p>
+      <p>Eliot Rupe leads PathLight after two decades in U.S. Air Force Special Operations, retiring in 2026 as Chief of Standards &amp; Evaluations for the 724th Special Tactics Group — decorated with the Bronze Star Medal and recognized with the John Brown Award as the Air Force's top pararescueman. He is also a teaching elder and pastoral counselor, currently completing a Master's in Pastoral Counseling at Liberty University.</p>
+      <p>Every engagement — consulting, leadership development, or nonprofit work — starts from the same conviction: Scripture is the actual operating system, not an add-on.</p>
+      <p>Eliot currently serves as COO of <a href="https://4wguild.org">Four Winds Professional Guild</a>, a nonprofit — bringing that same day-to-day operating experience into PathLight's nonprofit consulting work.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="services">
+    <div class="section-inner reveal">
+      <h2>Services</h2>
+      <div class="services">
+        <div class="service">
+          <h3>Biblical Consulting</h3>
+          <p>Grounding leadership and organizational decisions in Scripture, not just best practice.</p>
+        </div>
+        <div class="service">
+          <h3>Leadership Development</h3>
+          <p>Formation-based leadership training for teams and rising leaders — not another skills workshop.</p>
+        </div>
+        <div class="service">
+          <h3>Nonprofit Consulting</h3>
+          <p>Governance, operations, and capacity-building support for mission-driven organizations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rol">
+    <div class="section-inner reveal">
+      <h2>The Rightly Ordered Leader</h2>
+      <p class="lede">PathLight's flagship framework for leadership formation, grounded entirely in Scripture — one life, rightly ordered.</p>
+      <p class="fountain-name">The Fountain</p>
+      <p class="fountain-flow">Christ <span class="arrow">→</span> Identity &amp; Inner Life <span class="arrow">→</span> Marriage &amp; Purity <span class="arrow">→</span> Children &amp; Family <span class="arrow">→</span> Church &amp; Community <span class="arrow">→</span> Work &amp; Vocation</p>
+      <p class="sequence"><b>Communion</b> → Hearing → Identity → Alignment → Authority → Character → Discipline → Community → Pressure → Discernment → <b>Multiplication</b> → Sending</p>
+      <p style="margin-top:18px;">Available as a talk, a residential course, and an upcoming book — currently being piloted with select partners. Reach out below to learn more.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="contact">
+    <div class="section-inner reveal">
+      <h2>Contact</h2>
+      <p>Southern Pines, North Carolina</p>
+      <div class="contact-row">
+        <a href="mailto:pathlightrol@gmail.com">pathlightrol@gmail.com</a>
+        <a href="https://www.linkedin.com/in/eliotrupe">LinkedIn</a>
+      </div>
+      <a class="cta-button" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0Nqj0R26VjqbiG_hMcqMYKFMmdf1lK3OAPswXP7HAnUSSwySAVHLJI0uCgvjkLq0eeObf37Wzx" target="_blank" rel="noopener">Schedule a call &rarr;</a>
+      </div>
+  </section>
+
+  <footer>&copy; 2026 PathLight LLC &middot; Southern Pines, NC</footer>
+
+</div>
+
+</body>
+</html>
