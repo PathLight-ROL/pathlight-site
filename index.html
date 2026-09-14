@@ -187,6 +187,23 @@
   p{ line-height: 1.7; font-weight: 300; font-size: 16.5px; max-width: 62ch; }
   .lede{ font-size: 18px; }
 
+  /* Flagship treatment for the Rightly Ordered Leader section — larger
+     than the standard section labels, and its lede bigger than the
+     Fountain sub-content beneath it. */
+  #rol h2{
+    font-size: clamp(27px, 3.8vw, 36px);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    text-transform: none;
+    line-height: 1.2;
+    margin: 0 0 18px;
+  }
+  #rol .lede{
+    font-size: clamp(19px, 2.3vw, 21px);
+    line-height: 1.6;
+    max-width: 60ch;
+  }
+
   .services{
     display: flex;
     flex-direction: column;
