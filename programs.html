@@ -252,6 +252,43 @@
   }
   .sequence b{ color: var(--ink); font-weight: 600; }
 
+  /* The Fountain illustration — front and center at the top of the page */
+  .fountain-figure{
+    margin: 8px auto 30px;
+    text-align: center;
+  }
+  .fountain-title{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: clamp(24px, 3.6vw, 32px);
+    color: var(--accent);
+    letter-spacing: 0.01em;
+    margin: 0 0 22px;
+  }
+  .fountain-svg{
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  .fountain-svg .fs-source{ fill: var(--accent); }
+  .fountain-svg .fs-line{ stroke: var(--accent-soft); stroke-width: 1.6; fill: none; }
+  .fountain-svg .fs-basin{ stroke: var(--accent); stroke-width: 1.8; fill: none; }
+  .fountain-svg .fs-label{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    fill: var(--ink);
+  }
+  .fountain-svg .fs-caption{
+    font-family: 'Lato', sans-serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 12.5px;
+    fill: var(--ink-soft);
+  }
+
   .facts{
     display: flex;
     flex-wrap: wrap;
@@ -358,31 +395,38 @@
 
   <section class="alt" id="framework">
     <div class="section-inner reveal">
+      <div class="fountain-figure">
+        <p class="fountain-title">The Fountain</p>
+        <svg class="fountain-svg" viewBox="0 0 320 550" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+          <path class="fs-source" d="M160,10 C154,17 154,24 160,31 C166,24 166,17 160,10 Z"/>
+          <text class="fs-caption" x="160" y="50" text-anchor="middle">Christ, the source</text>
+          <path d="M152,80 L168,80 L160,92 Z" class="fs-source"/>
+
+          <path class="fs-basin" d="M132,110 Q160,128 188,110"/>
+          <path d="M152,136 L168,136 L160,148 Z" class="fs-source"/>
+          <text class="fs-label" x="160" y="168" text-anchor="middle">Identity &amp; Inner Life</text>
+
+          <path class="fs-basin" d="M120,202 Q160,220 200,202"/>
+          <path d="M152,228 L168,228 L160,240 Z" class="fs-source"/>
+          <text class="fs-label" x="160" y="260" text-anchor="middle">Marriage &amp; Purity</text>
+
+          <path class="fs-basin" d="M108,294 Q160,312 212,294"/>
+          <path d="M152,320 L168,320 L160,332 Z" class="fs-source"/>
+          <text class="fs-label" x="160" y="352" text-anchor="middle">Family</text>
+
+          <path class="fs-basin" d="M96,386 Q160,404 224,386"/>
+          <path d="M152,412 L168,412 L160,424 Z" class="fs-source"/>
+          <text class="fs-label" x="160" y="444" text-anchor="middle">Church &amp; Community</text>
+
+          <path class="fs-basin" d="M84,478 Q160,496 236,478"/>
+          <text class="fs-label" x="160" y="520" text-anchor="middle">Work &amp; Vocation</text>
+        </svg>
+      </div>
       <h2>What Is Rightly Ordered?</h2>
       <p class="lede">One framework, grounded entirely in Scripture, applied at every stage of life &mdash; from the student preparing for what&rsquo;s next to the leader further along handing off what he&rsquo;s built.</p>
       <p class="fountain-name">The Fountain</p>
       <p>Christ at the source, flowing out through identity and the inner life, marriage and purity, children and family, church and community, and into work and vocation. Order that starts on the inside and works its way out &mdash; not a system projected from the outside in.</p>
       <p>Underneath every applied format runs the same sequence: communion with God, then hearing Him, identity, alignment, authority, character, discipline, community, pressure, discernment, multiplication, and sending. Each program below is that sequence, translated for a specific season of life.</p>
-    </div>
-  </section>
-
-    <section class="alt" id="why-it-matters">
-    <div class="section-inner reveal">
-      <p class="tag">Why It Matters</p>
-      <h2>What This Actually Trains</h2>
-      <p class="lede">Every format above teaches the same handful of things. They&rsquo;re worth naming on their own &mdash; and worth asking whether your group, gathering, or church is teaching them anywhere else.</p>
-
-      <p class="fountain-name">A norm absorbed is not a conviction earned</p>
-      <p>Everyone is being formed by something. Left unexamined, it&rsquo;s whatever culture surrounds them &mdash; absorbed by default and mistaken for common sense by the time it&rsquo;s load-bearing. Scripture doesn&rsquo;t call God&rsquo;s people to withdraw from that culture, and it doesn&rsquo;t call them to blend into it (Romans 12:2). It describes a third way: called out, while still in it. The first thing any group has to learn is how to tell the difference between the two.</p>
-
-      <p class="fountain-name">Feedback that answers to Scripture, not to the room</p>
-      <p>A small group that meets every week can quietly become one more culture to conform to &mdash; the very problem it was meant to correct, wearing different clothes. That&rsquo;s why every Rightly Ordered format trains one specific habit: when someone says &ldquo;we don&rsquo;t do that here,&rdquo; the next question is where Scripture says it. If it doesn&rsquo;t, it&rsquo;s a preference, and a preference doesn&rsquo;t bind anyone&rsquo;s conscience. Iron only sharpens iron when the edge is Scripture, not opinion.</p>
-
-      <p class="fountain-name">Every sphere of life, not one topic</p>
-      <p>Identity, marriage, family, church, work, authority &mdash; Scripture speaks to all of it, not just the Sunday-morning slice. Formation that only touches one sphere leaves the other five to be shaped by whatever&rsquo;s loudest that week. The Fountain runs through all of them on purpose.</p>
-
-      <p class="fountain-name">Built to be handed off, not just absorbed</p>
-      <p>The goal isn&rsquo;t that someone finishes the material. It&rsquo;s that they finish able to lead someone else through it. That&rsquo;s why this belongs inside a group, a gathering, a church &mdash; formation that only runs one direction, teacher to listener, stops the moment the teacher steps out of the room. Formation built to multiply keeps going after that.</p>
     </div>
   </section>
 
@@ -439,6 +483,26 @@
       <p>If your church, team, or organization needs Rightly Ordered built for a specific context &mdash; a men&rsquo;s or women&rsquo;s ministry, a leadership team, a particular vocation or season of life &mdash; PathLight will build it with you rather than hand over something made for someone else.</p>
       <p>Reach out, and we&rsquo;ll work through what your people actually need before anything gets written, so the result fits your organization and situation rather than a generic template.</p>
       <a class="cta-button" href="index.html#contact">Start the conversation &rarr;</a>
+    </div>
+  </section>
+
+  <section class="alt" id="why-it-matters">
+    <div class="section-inner reveal">
+      <p class="tag">Why It Matters</p>
+      <h2>What This Actually Trains</h2>
+      <p class="lede">Every format above teaches the same handful of things. They&rsquo;re worth naming on their own &mdash; and worth asking whether your group, gathering, or church is teaching them anywhere else.</p>
+
+      <p class="fountain-name">A norm absorbed is not a conviction earned</p>
+      <p>Everyone is being formed by something. Left unexamined, it&rsquo;s whatever culture surrounds them &mdash; absorbed by default and mistaken for common sense by the time it&rsquo;s load-bearing. Scripture doesn&rsquo;t call God&rsquo;s people to withdraw from that culture, and it doesn&rsquo;t call them to blend into it (Romans 12:2). It describes a third way: called out, while still in it. The first thing any group has to learn is how to tell the difference between the two.</p>
+
+      <p class="fountain-name">Feedback that answers to Scripture, not to the room</p>
+      <p>A small group that meets every week can quietly become one more culture to conform to &mdash; the very problem it was meant to correct, wearing different clothes. That&rsquo;s why every Rightly Ordered format trains one specific habit: when someone says &ldquo;we don&rsquo;t do that here,&rdquo; the next question is where Scripture says it. If it doesn&rsquo;t, it&rsquo;s a preference, and a preference doesn&rsquo;t bind anyone&rsquo;s conscience. Iron only sharpens iron when the edge is Scripture, not opinion.</p>
+
+      <p class="fountain-name">Every sphere of life, not one topic</p>
+      <p>Identity, marriage, family, church, work, authority &mdash; Scripture speaks to all of it, not just the Sunday-morning slice. Formation that only touches one sphere leaves the other five to be shaped by whatever&rsquo;s loudest that week. The Fountain runs through all of them on purpose.</p>
+
+      <p class="fountain-name">Built to be handed off, not just absorbed</p>
+      <p>The goal isn&rsquo;t that someone finishes the material. It&rsquo;s that they finish able to lead someone else through it. That&rsquo;s why this belongs inside a group, a gathering, a church &mdash; formation that only runs one direction, teacher to listener, stops the moment the teacher steps out of the room. Formation built to multiply keeps going after that.</p>
     </div>
   </section>
 
