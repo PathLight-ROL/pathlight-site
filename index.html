@@ -120,8 +120,43 @@
   .topbar-cta:hover{ background: var(--accent); color: var(--bg); }
   .topbar-cta:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
 
+  .menu-toggle{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding: 7px 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .menu-toggle:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
   @media (max-width: 760px){
-    .topbar-links{ display: none; }
+    .menu-toggle{ display: inline-flex; }
+    .topbar-links{
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 4px 24px 12px;
+    }
+    .topbar-links.open{ display: flex; }
+    .topbar-links a{
+      padding: 12px 0;
+      border-top: 1px solid var(--rule);
+      font-size: 14.5px;
+    }
+    .topbar-links a:first-child{ border-top: none; }
   }
 
   header.hero{
@@ -314,15 +349,33 @@
       </svg>
       <span>PathLight</span>
     </a>
-    <div class="topbar-links">
+    <div class="topbar-links" id="topbar-links">
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#rol">Rightly Ordered Leader</a>
+      <a href="programs.html">Programs</a>
       <a href="#contact">Contact</a>
     </div>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="topbar-links" aria-label="Menu">Menu</button>
     <a class="topbar-cta" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1Ywa3rlnAyj8ohy_hpIhqo0nLKjvyIB7xFlFZoJAjHWUgwjWbBQrRj7OjBOS2uxFEjlQ_Hoc3V" target="_blank" rel="noopener">Schedule a call</a>
   </div>
 </nav>
+<script>
+(function(){
+  var btn = document.getElementById('menu-toggle');
+  var links = document.getElementById('topbar-links');
+  if(!btn || !links) return;
+  function closeMenu(){ links.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  function openMenu(){ links.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  btn.addEventListener('click', function(){
+    if(btn.getAttribute('aria-expanded') === 'true'){ closeMenu(); } else { openMenu(); }
+  });
+  links.addEventListener('click', function(e){ if(e.target.tagName === 'A'){ closeMenu(); } });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true'){ closeMenu(); btn.focus(); }
+  });
+})();
+</script>
 
 <div class="wrap">
 
@@ -379,6 +432,8 @@
     <div class="section-inner reveal">
       <h2>The Rightly Ordered Leader</h2>
       <p class="lede">PathLight's flagship framework for leadership formation, grounded entirely in Scripture — one life, rightly ordered.</p>
+      <p>Following Christ begins with the gospel. Jesus Christ died for sinners and rose from the dead. God saves by grace through faith, calling us to repentance and a life under Christ's lordship. That life is received as a gift, and following Him can be costly.</p>
+      <p style="margin-top:10px;">Rightly Ordered Leadership helps people consider how that calling reaches identity, relationships, family, church, and work. The Fountain below is a teaching aid for that calling, not a ladder of spiritual maturity.</p>
       <p class="fountain-name">The Fountain</p>
       <p>Christ at the source, flowing out through identity, marriage and purity, family, church, and vocation — the same framework applied at every stage of life. To the student preparing for what's next. To the emerging leader stepping into real responsibility. To the one further along, handing off what he's built.</p>
       <p class="verse" style="margin-top:24px;">&ldquo;Consider it all joy, my brethren, when you encounter various trials.&rdquo; <cite>— James 1:2</cite></p>
