@@ -16,30 +16,6 @@
   @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Lato:ital,wght@0,300;0,400;0,600;1,400&display=swap');
 
   :root{
-    --bg: #F6F1E7;
-    --bg-alt: #EEE5D4;
-    --ink: #182238;
-    --ink-soft: #4B5872;
-    --accent: #A9824F;
-    --accent-soft: #C9A876;
-    --rule: rgba(24,34,56,0.16);
-    --nav-h: 64px;
-    color-scheme: light;
-  }
-  html{ scroll-behavior: smooth; }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg: #0E1626;
-      --bg-alt: #141F35;
-      --ink: #F2ECDC;
-      --ink-soft: #B7BFCF;
-      --accent: #D8B573;
-      --accent-soft: #E7CB94;
-      --rule: rgba(242,236,220,0.18);
-      color-scheme: dark;
-    }
-  }
-  :root[data-theme="dark"]{
     --bg: #0E1626;
     --bg-alt: #141F35;
     --ink: #F2ECDC;
@@ -47,7 +23,31 @@
     --accent: #D8B573;
     --accent-soft: #E7CB94;
     --rule: rgba(242,236,220,0.18);
+    --nav-h: 64px;
     color-scheme: dark;
+  }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg: #F6F1E7;
+      --bg-alt: #EEE5D4;
+      --ink: #182238;
+      --ink-soft: #4B5872;
+      --accent: #A9824F;
+      --accent-soft: #C9A876;
+      --rule: rgba(24,34,56,0.16);
+      color-scheme: light;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg: #F6F1E7;
+    --bg-alt: #EEE5D4;
+    --ink: #182238;
+    --ink-soft: #4B5872;
+    --accent: #A9824F;
+    --accent-soft: #C9A876;
+    --rule: rgba(24,34,56,0.16);
+    color-scheme: light;
   }
 
   *{ box-sizing: border-box; }
