@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statement of Faith | PathLight</title>
+<meta name="description" content="PathLight's Statement of Faith â the biblical convictions that ground the Rightly Ordered Leader framework and every program built from it.">
+<link rel="canonical" href="https://pathlightinfo.com/statement-of-faith.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pathlightinfo.com/statement-of-faith.html">
+<meta property="og:title" content="Statement of Faith | PathLight">
+<meta property="og:description" content="PathLight's Statement of Faith â the biblical convictions that ground the Rightly Ordered Leader framework and every program built from it.">
+</head>
+<body>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Lato:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+  :root{
+    --bg: #0E1626;
+    --bg-alt: #141F35;
+    --ink: #F2ECDC;
+    --ink-soft: #B7BFCF;
+    --accent: #D8B573;
+    --accent-soft: #E7CB94;
+    --rule: rgba(242,236,220,0.18);
+    --nav-h: 64px;
+    color-scheme: dark;
+  }
+  html{ scroll-behavior: smooth; }
+  @media (prefers-color-scheme: light){
+    :root:not([data-theme="dark"]){
+      --bg: #F6F1E7;
+      --bg-alt: #EEE5D4;
+      --ink: #182238;
+      --ink-soft: #4B5872;
+      --accent: #A9824F;
+      --accent-soft: #C9A876;
+      --rule: rgba(24,34,56,0.16);
+      color-scheme: light;
+    }
+  }
+  :root[data-theme="light"]{
+    --bg: #F6F1E7;
+    --bg-alt: #EEE5D4;
+    --ink: #182238;
+    --ink-soft: #4B5872;
+    --accent: #A9824F;
+    --accent-soft: #C9A876;
+    --rule: rgba(24,34,56,0.16);
+    color-scheme: light;
+  }
+
+  *{ box-sizing: border-box; }
+  body{
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Lato', system-ui, sans-serif;
+    padding: var(--nav-h) 24px 0;
+  }
+  .wrap{ max-width: 760px; margin: 0 auto; }
+
+  .topbar{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    height: var(--nav-h);
+    padding-inline: 24px;
+    background: var(--bg);
+    background: color-mix(in srgb, var(--bg) 90%, transparent);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--rule);
+  }
+  .topbar-inner{
+    max-width: 900px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .topbar-brand{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    text-decoration: none;
+    color: var(--ink);
+    flex-shrink: 0;
+  }
+  .topbar-mark{ width: 19px; height: 19px; color: var(--accent); }
+  .topbar-brand span{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    letter-spacing: 0.08em;
+  }
+  .topbar-links{
+    display: flex;
+    gap: 22px;
+    flex-wrap: nowrap;
+  }
+  .topbar-links a{
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    white-space: nowrap;
+  }
+  .topbar-links a:hover{ color: var(--accent); }
+  .topbar-links a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+  .topbar-cta{
+    flex-shrink: 0;
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 8px 15px;
+    border: 1px solid var(--accent);
+    color: var(--ink);
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .topbar-cta:hover{ background: var(--accent); color: var(--bg); }
+  .topbar-cta:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .menu-toggle{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    padding: 7px 14px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .menu-toggle:focus-visible{ outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  @media (max-width: 760px){
+    .menu-toggle{ display: inline-flex; }
+    .topbar-links{
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--rule);
+      padding: 4px 24px 12px;
+    }
+    .topbar-links.open{ display: flex; }
+    .topbar-links a{
+      padding: 12px 0;
+      border-top: 1px solid var(--rule);
+      font-size: 14.5px;
+    }
+    .topbar-links a:first-child{ border-top: none; }
+  }
+
+  header.hero{
+    padding-block: 64px 56px;
+    text-align: center;
+  }
+  .mark{ width: 46px; height: 46px; margin: 0 auto 22px; display: block; color: var(--accent); }
+  .eyebrow{
+    font-size: 12.5px;
+    letter-spacing: 0.28em;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    margin: 0 0 18px;
+  }
+  h1{
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: clamp(28px, 4.4vw, 42px);
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+    margin: 0 0 18px;
+    text-wrap: balance;
+  }
+  .subhead{
+    font-size: 17px;
+    color: var(--ink-soft);
+    margin: 0 0 30px;
+  }
+  .rule{
+    border: none;
+    border-top: 1px solid var(--rule);
+    width: 64px;
+    margin: 0 auto;
+  }
+
+  section{ padding-block: 48px; scroll-margin-top: var(--nav-h); }
+  section.alt{
+    background: var(--bg-alt);
+    margin-inline: -24px;
+    padding-inline: 24px;
+  }
+  .section-inner{ max-width: 760px; margin: 0 auto; }
+
+  h2{
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 26px;
+  }
+  p{ line-height: 1.7; font-weight: 300; font-size: 16.5px; max-width: 62ch; }
+  .lede{ font-size: 18px; }
+
+  .tag{
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid var(--accent-soft);
+    padding: 4px 10px;
+    margin: 0 0 16px;
+  }
+
+  .articles{ display: flex; flex-direction: column; counter-reset: article; }
+  .article{
+    padding-block: 26px;
+    border-top: 1px solid var(--rule);
+    counter-increment: article;
+  }
+  .article:last-child{ border-bottom: 1px solid var(--rule); }
+  .article h3{
+    font-family: 'Lato', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    margin: 0 0 10px;
+    color: var(--ink);
+  }
+  .article h3::before{
+    content: counter(article) ". ";
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .article p{ font-size: 15.5px; color: var(--ink-soft); margin: 0 0 10px; }
+  .article .cite{
+    font-size: 12.5px;
+    font-style: italic;
+    color: var(--accent-soft);
+    letter-spacing: 0.01em;
+  }
+
+  .section-inner a{
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+  .section-inner a:hover{ color: var(--accent); }
+  .section-inner a:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  .cta-button{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 12px 26px;
+    font-size: 14px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .cta-button:hover{ background: var(--accent); color: var(--bg); }
+  .cta-button:focus-visible{ outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  footer{
+    padding-block: 40px 56px;
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    letter-spacing: 0.03em;
+  }
+
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{ animation: rise .7s ease both; }
+  }
+  @keyframes rise{
+    from{ opacity: 0; transform: translateY(10px); }
+    to{ opacity: 1; transform: none; }
+  }
+</style>
+
+<nav class="topbar">
+  <div class="topbar-inner">
+    <a class="topbar-brand" href="index.html" aria-label="PathLight LLC â home">
+      <svg class="topbar-mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M24 3 L28 9 H20 Z" fill="currentColor"/>
+        <rect x="15" y="9" width="18" height="4" rx="1" fill="currentColor"/>
+        <rect x="14" y="15" width="20" height="24" rx="3" stroke="currentColor" stroke-width="1.6"/>
+        <line x1="14" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="1.2"/>
+        <line x1="14" y1="32" x2="34" y2="32" stroke="currentColor" stroke-width="1.2"/>
+        <path d="M24 24 C21 27 21 31 24 34 C27 31 27 27 24 24 Z" fill="currentColor"/>
+        <rect x="20" y="39" width="8" height="3" rx="1" fill="currentColor"/>
+      </svg>
+      <span>PathLight</span>
+    </a>
+    <div class="topbar-links" id="topbar-links">
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#rol">Rightly Ordered Leader</a>
+      <a href="programs.html">Programs</a>
+      <a href="statement-of-faith.html">Statement of Faith</a>
+      <a href="four-winds.html">Four Winds Guild</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="topbar-links" aria-label="Menu">Menu</button>
+    <a class="topbar-cta" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1Ywa3rlnAyj8ohy_hpIhqo0nLKjvyIB7xFlFZoJAjHWUgwjWbBQrRj7OjBOS2uxFEjlQ_Hoc3V" target="_blank" rel="noopener">Schedule a call</a>
+  </div>
+</nav>
+<script>
+(function(){
+  var btn = document.getElementById('menu-toggle');
+  var links = document.getElementById('topbar-links');
+  if(!btn || !links) return;
+  function closeMenu(){ links.classList.remove('open'); btn.setAttribute('aria-expanded','false'); }
+  function openMenu(){ links.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  btn.addEventListener('click', function(){
+    if(btn.getAttribute('aria-expanded') === 'true'){ closeMenu(); } else { openMenu(); }
+  });
+  links.addEventListener('click', function(e){ if(e.target.tagName === 'A'){ closeMenu(); } });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape' && btn.getAttribute('aria-expanded') === 'true'){ closeMenu(); btn.focus(); }
+  });
+})();
+</script>
+
+<div class="wrap">
+
+  <header class="hero">
+    <svg class="mark" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <path d="M24 3 L28 9 H20 Z" fill="currentColor"/>
+      <rect x="15" y="9" width="18" height="4" rx="1" fill="currentColor"/>
+      <rect x="14" y="15" width="20" height="24" rx="3" stroke="currentColor" stroke-width="1.6"/>
+      <line x1="14" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="1.2"/>
+      <line x1="14" y1="32" x2="34" y2="32" stroke="currentColor" stroke-width="1.2"/>
+      <path d="M24 24 C21 27 21 31 24 34 C27 31 27 27 24 24 Z" fill="currentColor"/>
+      <rect x="20" y="39" width="8" height="3" rx="1" fill="currentColor"/>
+    </svg>
+    <p class="eyebrow">Our Convictions</p>
+    <h1>Statement of Faith</h1>
+    <p class="subhead">The biblical convictions that ground Rightly Ordered Leadership and every program PathLight builds from it.</p>
+    <hr class="rule">
+  </header>
+
+  <section id="preamble">
+    <div class="section-inner reveal">
+      <p class="lede">PathLight's teaching, training, and leadership formation &mdash; including the Rightly Ordered Leader framework and every applied format built from it &mdash; is grounded in historic, biblical Christianity, as expressed in the Apostles' and Nicene Creeds. These convictions are not peripheral; they are foundational to how we teach, train, and conduct ourselves.</p>
+      <p>This Statement of Faith defines the theological boundaries within which all PathLight instruction and formation occurs. Participation in a PathLight course, program, or presentation does not require personal affirmation of these beliefs. All participants are expected to respect this Christian framework and to engage in a manner that does not contradict or undermine it.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="articles">
+    <div class="section-inner reveal">
+      <h2>The Nine Articles</h2>
+      <div class="articles">
+
+        <div class="article">
+          <h3>The Authority of Scripture</h3>
+          <p>We believe that the Holy Scriptures of the Old and New Testaments are the inspired, inerrant, and authoritative Word of God. Scripture is the final authority for faith, life, doctrine, and conduct. All leadership principles, training methods, and moral instruction within our programs are evaluated and governed by Scripture.</p>
+          <p class="cite">2 Timothy 3:16&ndash;17 &middot; 2 Peter 1:20&ndash;21 &middot; Psalm 19:7&ndash;11 &middot; Matthew 4:4 &middot; Hebrews 4:12</p>
+        </div>
+
+        <div class="article">
+          <h3>The Nature of God</h3>
+          <p>We believe in one God, eternally existent in three Persons: Father, Son, and Holy Spirit. God is holy, sovereign, just, merciful, and loving. He is the Creator and Sustainer of all things and the rightful Lord of every human life.</p>
+          <p class="cite">Deuteronomy 6:4 &middot; Matthew 28:19 &middot; Isaiah 6:3 &middot; Psalm 103:8&ndash;19 &middot; Colossians 1:16&ndash;17 &middot; Revelation 4:11</p>
+        </div>
+
+        <div class="article">
+          <h3>The Person and Work of Jesus Christ</h3>
+          <p>We believe that Jesus Christ is the eternal Son of God, fully God and fully man, conceived by the Holy Spirit and born of the virgin Mary. He lived a sinless life, willingly gave Himself as a substitutionary sacrifice for sin through His death on the cross, bodily rose from the dead, ascended into heaven, and will return in power and glory. Jesus Christ is not merely a moral example or leadership model &mdash; He is Lord. All leadership taught in our programs flows from allegiance to Him.</p>
+          <p class="cite">John 1:1&ndash;14 &middot; Luke 1:34&ndash;35 &middot; Hebrews 4:15 &middot; Isaiah 53:4&ndash;6 &middot; 1 Corinthians 15:3&ndash;8 &middot; Acts 1:9&ndash;11 &middot; Philippians 2:9&ndash;11</p>
+        </div>
+
+        <div class="article">
+          <h3>Salvation by Grace Through Faith</h3>
+          <p>We believe that salvation is a gift of God's grace, received through faith alone in Jesus Christ alone, not by works. True faith results in repentance, obedience, and a transformed life empowered by the Holy Spirit.</p>
+          <p class="cite">Ephesians 2:8&ndash;10 &middot; Romans 3:23&ndash;24 &middot; Titus 3:4&ndash;7 &middot; James 2:17&ndash;18 &middot; 2 Corinthians 5:17</p>
+        </div>
+
+        <div class="article">
+          <h3>The Role of the Holy Spirit</h3>
+          <p>We believe the Holy Spirit indwells every believer, regenerates the heart, convicts of sin, produces spiritual fruit, grants wisdom, and empowers obedience and service. The formation of godly leaders is impossible apart from the work of the Holy Spirit. A godly leader is called to obey, but the outcome and heart of others is the responsibility of the Holy Spirit to draw, convict, soften, or harden.</p>
+          <p class="cite">John 14:16&ndash;17 &middot; John 16:8&ndash;13 &middot; Galatians 5:22&ndash;23 &middot; Titus 3:5 &middot; 1 Corinthians 2:10&ndash;14 &middot; Ezekiel 36:26&ndash;27</p>
+        </div>
+
+        <div class="article">
+          <h3>The Nature of Man</h3>
+          <p>We believe that man is created in the image of God with inherent dignity and purpose, yet fallen through sin and in need of redemption. True leadership begins with humility, repentance, and submission to God. We are called to reject self-sovereignty and embrace our identity as bond-servants of Jesus Christ.</p>
+          <p class="cite">Genesis 1:26&ndash;27 &middot; Romans 3:23 &middot; Psalm 51:17 &middot; Luke 9:23 &middot; Romans 6:22 &middot; Philippians 2:5&ndash;8</p>
+        </div>
+
+        <div class="article">
+          <h3>The Church and Christian Community</h3>
+          <p>We believe the Church is the body of Christ, composed of all true believers called by the Holy Spirit. Godly leadership is exercised in community, not isolation. Leaders are called to shepherd, serve, protect, and build others up within families, churches, and society.</p>
+          <p class="cite">1 Corinthians 12:12&ndash;27 &middot; Ephesians 4:11&ndash;16 &middot; Acts 2:42&ndash;47 &middot; 1 Peter 5:1&ndash;4 &middot; Hebrews 10:24&ndash;25</p>
+        </div>
+
+        <div class="article">
+          <h3>The Mission of the Believer</h3>
+          <p>We believe every believer is called to obey and love God as a bond-servant, love others according to Scripture, make disciples, pursue holiness, and faithfully steward the responsibilities God entrusts to them. Leadership is not self-advancement but sacrificial service for the glory of God.</p>
+          <p class="cite">Matthew 22:37&ndash;40 &middot; Matthew 28:18&ndash;20 &middot; Romans 12:1&ndash;2 &middot; Micah 6:8 &middot; Mark 10:42&ndash;45 &middot; 1 Corinthians 4:1&ndash;2</p>
+        </div>
+
+        <div class="article">
+          <h3>Marriage and Sexuality</h3>
+          <p>We believe God creates human beings as male and female, each fully bearing His image and endowed with distinct yet complementary gifts and callings. This design is intentional, from conception. We believe marriage is a covenant established by God between one man and one woman.</p>
+          <p class="cite">Genesis 1:27&ndash;28 &middot; Genesis 2:18&ndash;24 &middot; Psalm 139:13&ndash;16 &middot; Matthew 19:3&ndash;6 &middot; Romans 1:26&ndash;27 &middot; Ephesians 5:31&ndash;33</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="alignment">
+    <div class="section-inner reveal">
+      <h2>Instructors &amp; Contributors</h2>
+      <p>These beliefs belong to PathLight and govern all teaching, leadership development, and conduct within our programs. Individuals who serve as instructors or contributors come from a variety of backgrounds and experiences. While they are not required to personally affirm every element of this Statement of Faith, all who serve in instructional, leadership, or representative roles are required to teach, lead, and conduct themselves in full alignment with these beliefs, in harmony with our ethical and moral compass, and in support of our mission.</p>
+      <p>Some instruction may constructively engage differing worldviews &mdash; our students and participants are being prepared to articulate and hold their convictions with clarity and humility in a world of competing beliefs, not to be sheltered from that world.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="questions">
+    <div class="section-inner reveal">
+      <p class="tag">Questions</p>
+      <h2>Ask About Our Convictions</h2>
+      <p>If you're a church, ministry, or family considering a PathLight program and have questions about these convictions or how they shape a particular course, we're glad to talk it through before you commit to anything.</p>
+      <a class="cta-button" href="mailto:eliot@pathlightinfo.com?subject=Question%20about%20the%20Statement%20of%20Faith">Ask a question &rarr;</a>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 PathLight LLC &middot; Southern Pines, NC</footer>
+
+</div>
+
+</body>
+</html>
